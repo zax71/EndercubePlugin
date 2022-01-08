@@ -1,0 +1,7 @@
+name: GHSPPAdminTools
+version: '${project.version}'
+main: me.zax71.ghsppadmintools.GHSPPAdminTools
+api-version: 1.17
+authors: [ Zax71 ]
+description: Custom admin tools for GHS++
+depend: [ PlaceholderAPI ]

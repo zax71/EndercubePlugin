@@ -1,0 +1,6 @@
+# GHSPP Admin Tools Configuration
+
+# Command to be run when a player presses F
+commands:
+  - 'say FCmd commmand 1'
+  - 'say FCmd commmand 2'
