@@ -25,7 +25,7 @@ public class TradeGUI extends BaseCommand {
                 .text("Player Name")
                 .itemLeft(new ItemStack(Material.PAPER))
                 .itemRight(new ItemStack(Material.PAPER))
-                .title("Who do you want to trade with?")
+                .title("Player to trade")
                 .plugin(GHSPPAdminTools.plugin)
                 .open(sender);
     }
