@@ -17,9 +17,14 @@ public class TradeGUI extends BaseCommand {
     @Default
     @CommandPermission("GHSPP.tradeGUI")
     public static void onTradeGUI(Player sender, String[] args) {
+        if (args.length == 1) {
+            sender = Bukkit.getServer().getPlayer(args[0]);
+        }
+        Player finalSender = sender;
+
         new AnvilGUI.Builder()
                 .onComplete((player, text) -> {
-                    Bukkit.dispatchCommand(sender, "trade " + text);
+                    Bukkit.dispatchCommand(finalSender, "trade " + text);
                     return AnvilGUI.Response.close();
                 })
                 .text("Player Name")
