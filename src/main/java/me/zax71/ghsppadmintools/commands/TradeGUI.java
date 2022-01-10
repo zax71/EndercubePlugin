@@ -36,16 +36,20 @@ public class TradeGUI extends BaseCommand {
                 GHSPPAdminTools.plugin.getLogger().warning("/tradeGUI must be used with online players");
             }
         }
+        if (player != null) {
+            new AnvilGUI.Builder()
+                    .onComplete((completePlayer, text) -> {
+                        Bukkit.dispatchCommand(completePlayer, "trade " + text);
+                        return AnvilGUI.Response.close();
+                    })
+                    .text("Player Name")
+                    .itemLeft(new ItemStack(Material.PAPER))
+                    .title("Player to trade with")
+                    .plugin(GHSPPAdminTools.plugin)
+                    .open(player);
+        } else {
+            GHSPPAdminTools.plugin.getLogger().warning("/tradeGUI must be used with online players");
+        }
 
-        new AnvilGUI.Builder()
-                .onComplete((completePlayer, text) -> {
-                    Bukkit.dispatchCommand(completePlayer, "trade " + text);
-                    return AnvilGUI.Response.close();
-                })
-                .text("Player Name")
-                .itemLeft(new ItemStack(Material.PAPER))
-                .title("Player to trade with")
-                .plugin(GHSPPAdminTools.plugin)
-                .open(player);
     }
 }
