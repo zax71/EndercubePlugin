@@ -28,6 +28,7 @@ public final class GHSPPAdminTools extends JavaPlugin {
         commandManager.registerCommand(new NoName());
         commandManager.registerCommand(new Rename());
         commandManager.registerCommand(new TradeGUI());
+        commandManager.registerCommand(new CenterTP());
 
         // Register events
 
