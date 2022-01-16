@@ -17,9 +17,12 @@ public class CenterTP extends BaseCommand {
         double senderX = sender.getLocation().getBlockX() + 0.5;
         double senderY = sender.getLocation().getBlockY();
         double senderZ = sender.getLocation().getBlockZ() + 0.5;
+        float senderPitch = sender.getLocation().getPitch();
+        float senderYaw = sender.getLocation().getYaw();
+
         World senderWorld = sender.getWorld();
 
-        Location senderLocation = new Location(senderWorld, senderX, senderY, senderZ, 0, 0);
+        Location senderLocation = new Location(senderWorld, senderX, senderY, senderZ, senderYaw, senderPitch);
 
         sender.teleport(senderLocation);
     }
