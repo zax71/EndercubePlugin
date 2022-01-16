@@ -14,9 +14,9 @@ public class CenterTP extends BaseCommand {
     @Default
     @CommandPermission("GHSPP.CenterTP")
     public static void onColor(Player sender, String[] args) {
-        double senderX = sender.getLocation().getBlockX();
+        double senderX = sender.getLocation().getBlockX() + 0.5;
         double senderY = sender.getLocation().getBlockY();
-        double senderZ = sender.getLocation().getBlockZ();
+        double senderZ = sender.getLocation().getBlockZ() + 0.5;
         World senderWorld = sender.getWorld();
 
         Location senderLocation = new Location(senderWorld, senderX, senderY, senderZ, 0, 0);
