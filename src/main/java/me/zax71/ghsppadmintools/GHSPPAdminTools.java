@@ -2,6 +2,7 @@ package me.zax71.ghsppadmintools;
 
 import co.aikar.commands.PaperCommandManager;
 import me.zax71.ghsppadmintools.commands.*;
+import me.zax71.ghsppadmintools.events.EntityDeath;
 import me.zax71.ghsppadmintools.events.PlayerSwapHandItems;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -33,6 +34,7 @@ public final class GHSPPAdminTools extends JavaPlugin {
         // Register events
 
         getServer().getPluginManager().registerEvents(new PlayerSwapHandItems(), this);
+        getServer().getPluginManager().registerEvents(new EntityDeath(), this);
     }
 
     @Override
