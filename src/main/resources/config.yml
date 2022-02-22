@@ -6,3 +6,10 @@ Fcommand:
   commands:
     - 'say FCmd commmand 1'
     - 'say FCmd commmand 2'
+
+# Kick a player when they join on a specific IP address
+ipKick:
+  enabled: True
+  kickList: # These IP addresses include the port, normally :25565
+    - 'your.domain.net:25565'
+  kickMessage: 'Sorry, you can''t join on this ip address'
