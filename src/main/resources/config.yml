@@ -9,7 +9,8 @@ Fcommand:
 
 # Kick a player when they join on a specific IP address
 ipKick:
-  enabled: True
+  enabled: true
+  debugEnabled: false # Send the IP a player connected on in console whenever someone joins
   kickList: # These IP addresses include the port, normally :25565
     - 'your.domain.net:25565'
   kickMessage: 'Sorry, you can''t join on this ip address'

@@ -16,14 +16,17 @@ public class PlayerLogin implements Listener {
         // Get config values and the player
         Boolean enabled = GHSPPAdminTools.plugin.getConfig().getBoolean("ipKick.enabled");
         String kickMessage = GHSPPAdminTools.plugin.getConfig().getString("ipKick.kickMessage");
+        Boolean debugEnabled = GHSPPAdminTools.plugin.getConfig().getBoolean("ipKick.debugEnabled");
         Player player = e.getPlayer();
         String ip = e.getHostname(); // IP that the player joined on
 
-        GHSPPAdminTools.plugin.getLogger().warning("IP: " + ip);
+        // Are debug messages enabled?
+        if (debugEnabled.equals(Boolean.TRUE)) {
+            GHSPPAdminTools.plugin.getLogger().info("Player joined on the IP of: " + ip);
+        }
+
         // Is it enabled in the config?
         if (enabled.equals(Boolean.TRUE)) {
-
-            GHSPPAdminTools.plugin.getLogger().warning("enabled");
 
 
             List<?> kickList = GHSPPAdminTools.plugin.getConfig().getList("ipKick.kickList"); // List of blocked IP's
