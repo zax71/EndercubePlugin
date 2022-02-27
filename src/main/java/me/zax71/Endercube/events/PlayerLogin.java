@@ -13,6 +13,7 @@ public class PlayerLogin implements Listener {
 
     @EventHandler
     public void onPlayerLoginEvent(PlayerLoginEvent e) {
+
         // Get config values and the player
         Boolean enabled = Endercube.plugin.getConfig().getBoolean("ipKick.enabled");
         String kickMessage = Endercube.plugin.getConfig().getString("ipKick.kickMessage");

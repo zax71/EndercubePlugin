@@ -14,3 +14,7 @@ ipKick:
   kickList: # These IP addresses include the port, normally :25565
     - 'your.domain.net:25565'
   kickMessage: 'Sorry, you can''t join on this ip address'
+
+joinMessage:
+  enabled: true
+  message: "<red>Someone Joined"

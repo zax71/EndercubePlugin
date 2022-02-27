@@ -3,6 +3,7 @@ package me.zax71.Endercube;
 import co.aikar.commands.PaperCommandManager;
 import me.zax71.Endercube.commands.*;
 import me.zax71.Endercube.events.EntityDeath;
+import me.zax71.Endercube.events.PlayerJoin;
 import me.zax71.Endercube.events.PlayerLogin;
 import me.zax71.Endercube.events.PlayerSwapHandItems;
 import org.bukkit.ChatColor;
@@ -37,6 +38,7 @@ public final class Endercube extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerSwapHandItems(), this);
         getServer().getPluginManager().registerEvents(new EntityDeath(), this);
         getServer().getPluginManager().registerEvents(new PlayerLogin(), this);
+        getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
     }
 
     @Override
