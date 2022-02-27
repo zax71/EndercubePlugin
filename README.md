@@ -1,7 +1,7 @@
 # Endercube
 
 ## About
-Adds GHS++'s custom features! including `/rename`, `/noname`, `/color`, `/itemstack` and custom functionality for the `F` key
+Adds Endercube's custom features! including `/rename`, `/noname`, `/color`, `/itemstack`, custom functionality for the `F` key and many more
 
 ## Building
 There are releases in the releases tab but if you want to compile it yourself run `mvn clean package`
