@@ -1,7 +1,7 @@
-package me.zax71.ghsppadmintools.events;
+package me.zax71.Endercube.events;
 
 import me.clip.placeholderapi.PlaceholderAPI;
-import me.zax71.ghsppadmintools.GHSPPAdminTools;
+import me.zax71.Endercube.Endercube;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -14,7 +14,7 @@ public class PlayerSwapHandItems implements Listener {
 
     @EventHandler
     public void onPlayerSwapHandItemsEvent(PlayerSwapHandItemsEvent e) {
-        if (GHSPPAdminTools.plugin.getConfig().getBoolean("Fcommand.enabled")) {
+        if (Endercube.plugin.getConfig().getBoolean("Fcommand.enabled")) {
             // Get the player
             Player p = e.getPlayer();
 
@@ -22,7 +22,7 @@ public class PlayerSwapHandItems implements Listener {
             e.setCancelled(true);
 
             // Get the values from config
-            List<?> commands = GHSPPAdminTools.plugin.getConfig().getList("Fcommand.commands");
+            List<?> commands = Endercube.plugin.getConfig().getList("Fcommand.commands");
 
 
 
@@ -40,7 +40,7 @@ public class PlayerSwapHandItems implements Listener {
                     Bukkit.dispatchCommand(Bukkit.getConsoleSender(), papiCommand);
                 }
             } else {
-                GHSPPAdminTools.plugin.getLogger().severe("No commands are in config.yml, add at least one!");
+                Endercube.plugin.getLogger().severe("No commands are in config.yml, add at least one!");
             }
         }
 

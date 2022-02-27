@@ -1,10 +1,10 @@
-package me.zax71.ghsppadmintools.commands;
+package me.zax71.Endercube.commands;
 
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.CommandAlias;
 import co.aikar.commands.annotation.CommandPermission;
 import co.aikar.commands.annotation.Default;
-import me.zax71.ghsppadmintools.GHSPPAdminTools;
+import me.zax71.Endercube.Endercube;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -35,7 +35,7 @@ public class Rename extends BaseCommand {
             // Set the items meta to the one defined above
             player.getInventory().getItemInMainHand().setItemMeta(itemMeta);
         } else {
-            player.sendMessage(GHSPPAdminTools.plugin.prefix + ChatColor.AQUA + "Must supply the text to be renamed to");
+            player.sendMessage(Endercube.plugin.prefix + ChatColor.AQUA + "Must supply the text to be renamed to");
         }
 
     }

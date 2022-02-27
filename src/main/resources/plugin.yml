@@ -1,7 +1,7 @@
-name: GHSPPAdminTools
+name: Endercube
 version: '${project.version}'
-main: me.zax71.ghsppadmintools.GHSPPAdminTools
+main: me.zax71.Endercube.Endercube
 api-version: 1.17
 authors: [ Zax71 ]
-description: Custom admin tools for GHS++
+description: Custom admin tools for Endercube
 depend: [ PlaceholderAPI ]

@@ -1,4 +1,4 @@
-# GHSPPAdminTools
+# Endercube
 
 ## About
 Adds GHS++'s custom features! including `/rename`, `/noname`, `/color`, `/itemstack` and custom functionality for the `F` key

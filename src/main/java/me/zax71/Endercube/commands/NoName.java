@@ -1,10 +1,10 @@
-package me.zax71.ghsppadmintools.commands;
+package me.zax71.Endercube.commands;
 
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.CommandAlias;
 import co.aikar.commands.annotation.CommandPermission;
 import co.aikar.commands.annotation.Default;
-import me.zax71.ghsppadmintools.GHSPPAdminTools;
+import me.zax71.Endercube.Endercube;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

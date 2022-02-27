@@ -21,5 +21,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: SVL-dev-build
-          path: target/GHSPPAdminTools-*.*.*.jar
+          name: Endercube-dev-build
+          path: target/Endercube-*.*.*.jar

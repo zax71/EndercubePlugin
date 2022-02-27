@@ -1,11 +1,11 @@
-package me.zax71.ghsppadmintools.commands;
+package me.zax71.Endercube.commands;
 
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.CommandAlias;
 import co.aikar.commands.annotation.CommandCompletion;
 import co.aikar.commands.annotation.CommandPermission;
 import co.aikar.commands.annotation.Default;
-import me.zax71.ghsppadmintools.GHSPPAdminTools;
+import me.zax71.Endercube.Endercube;
 import net.wesjd.anvilgui.AnvilGUI;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -33,7 +33,7 @@ public class TradeGUI extends BaseCommand {
             if (Bukkit.getOnlinePlayers().toString().toLowerCase().contains(args[0].toLowerCase())) {
                 player = Bukkit.getPlayer(args[0]);
             } else {
-                GHSPPAdminTools.plugin.getLogger().warning("/tradeGUI must be used with online players");
+                Endercube.plugin.getLogger().warning("/tradeGUI must be used with online players");
             }
         }
         if (player != null) {
@@ -45,10 +45,10 @@ public class TradeGUI extends BaseCommand {
                     .text("Player Name")
                     .itemLeft(new ItemStack(Material.PAPER))
                     .title("Player to trade with")
-                    .plugin(GHSPPAdminTools.plugin)
+                    .plugin(Endercube.plugin)
                     .open(player);
         } else {
-            GHSPPAdminTools.plugin.getLogger().warning("/tradeGUI must be used with online players");
+            Endercube.plugin.getLogger().warning("/tradeGUI must be used with online players");
         }
 
     }

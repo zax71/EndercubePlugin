@@ -1,4 +1,4 @@
-package me.zax71.ghsppadmintools.commands;
+package me.zax71.Endercube.commands;
 
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.CommandAlias;

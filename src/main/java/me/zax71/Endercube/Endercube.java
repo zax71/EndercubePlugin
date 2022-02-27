@@ -1,18 +1,18 @@
-package me.zax71.ghsppadmintools;
+package me.zax71.Endercube;
 
 import co.aikar.commands.PaperCommandManager;
-import me.zax71.ghsppadmintools.commands.*;
-import me.zax71.ghsppadmintools.events.EntityDeath;
-import me.zax71.ghsppadmintools.events.PlayerLogin;
-import me.zax71.ghsppadmintools.events.PlayerSwapHandItems;
+import me.zax71.Endercube.commands.*;
+import me.zax71.Endercube.events.EntityDeath;
+import me.zax71.Endercube.events.PlayerLogin;
+import me.zax71.Endercube.events.PlayerSwapHandItems;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class GHSPPAdminTools extends JavaPlugin {
+public final class Endercube extends JavaPlugin {
 
-    public static GHSPPAdminTools plugin;
-    public String prefix = ChatColor.DARK_GRAY + "[" + ChatColor.AQUA + "GHS++" + ChatColor.DARK_GRAY + "] " + ChatColor.RESET;
+    public static Endercube plugin;
+    public String prefix = ChatColor.DARK_GRAY + "[" + ChatColor.DARK_AQUA + "Endercube" + ChatColor.DARK_GRAY + "] " + ChatColor.RESET;
 
     @Override
     public void onEnable() {

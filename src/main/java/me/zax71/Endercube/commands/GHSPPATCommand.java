@@ -1,19 +1,19 @@
-package me.zax71.ghsppadmintools.commands;
+package me.zax71.Endercube.commands;
 
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.*;
-import me.zax71.ghsppadmintools.GHSPPAdminTools;
+import me.zax71.Endercube.Endercube;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 
-@CommandAlias("GHSPPAT|GHSPP|GHSPPAdminTools")
+@CommandAlias("GHSPPAT|GHSPP|Endercube")
 public class GHSPPATCommand extends BaseCommand {
 
     @Subcommand("reload")
     @CommandPermission("GHSPP.cmd.reload")
     public static void onGHSPPReload(CommandSender sender, String[] args) {
-        GHSPPAdminTools.plugin.reloadConfig();
-        sender.sendMessage(GHSPPAdminTools.plugin.prefix + ChatColor.AQUA + "Config Successfully Reloaded");
+        Endercube.plugin.reloadConfig();
+        sender.sendMessage(Endercube.plugin.prefix + ChatColor.AQUA + "Config Successfully Reloaded");
     }
 
     @Default
