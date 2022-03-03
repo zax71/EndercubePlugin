@@ -11,7 +11,7 @@
 
     <name>Endercube</name>
 
-    <description>Custom admin tools for GHS++</description>
+    <description>Custom admin tools for Endercube</description>
     <properties>
         <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
