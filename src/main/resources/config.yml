@@ -16,5 +16,5 @@ ipKick:
   kickMessage: 'Sorry, you can''t join on this ip address'
 
 joinMessage:
-  enabled: true
+  enabled: false
   message: "<red>Someone Joined"
