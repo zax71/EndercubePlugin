@@ -17,7 +17,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 public class Rename extends BaseCommand {
 
     @Default
-    @CommandPermission("GHSPP.rename")
+    @CommandPermission("endercube.rename")
     public static void onRename(CommandSender sender, String[] args) {
         // Get the sender as a player
         Player player = Bukkit.getServer().getPlayer(sender.getName());

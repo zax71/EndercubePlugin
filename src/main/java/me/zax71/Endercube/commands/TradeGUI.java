@@ -16,7 +16,7 @@ import org.bukkit.inventory.ItemStack;
 public class TradeGUI extends BaseCommand {
 
     @Default
-    @CommandPermission("GHSPP.tradeGUI")
+    @CommandPermission("endercube.tradeGUI")
     @CommandCompletion("@players")
     public static void onTradeGUI(Player sender, String[] args) {
 

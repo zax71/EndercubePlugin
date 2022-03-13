@@ -17,7 +17,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 public class NoName extends BaseCommand {
 
     @Default
-    @CommandPermission("GHSPP.noname")
+    @CommandPermission("endercube.noname")
     public static void onNoName(CommandSender sender, String[] args) {
 
         // Get the sender as a player

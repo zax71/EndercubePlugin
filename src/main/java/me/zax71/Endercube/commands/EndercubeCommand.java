@@ -10,7 +10,7 @@ import org.bukkit.command.CommandSender;
 public class EndercubeCommand extends BaseCommand {
 
     @Subcommand("reload")
-    @CommandPermission("GHSPP.cmd.reload")
+    @CommandPermission("endercube.cmd.reload")
     public static void onECReload(CommandSender sender, String[] args) {
         Endercube.plugin.reloadConfig();
         sender.sendMessage(Endercube.plugin.prefix + ChatColor.AQUA + "Config Successfully Reloaded");
@@ -18,7 +18,7 @@ public class EndercubeCommand extends BaseCommand {
 
     @Default
     @HelpCommand
-    @CommandPermission("GHSPP.cmd.help")
+    @CommandPermission("endercube.cmd.help")
     public static void onECHelp(CommandSender sender, String[] args) {
         sender.sendMessage("/EC reload - Reloads the plugin");
         sender.sendMessage("/colour - Shows a list of bukkit colour codes");

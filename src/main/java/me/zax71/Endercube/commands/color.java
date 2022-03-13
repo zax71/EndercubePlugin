@@ -11,7 +11,7 @@ import org.bukkit.command.CommandSender;
 public class color extends BaseCommand {
 
         @Default
-        @CommandPermission("GHSPP.color")
+        @CommandPermission("endercube.color")
         public static void onColor(CommandSender sender, String[] args) {
 
             sender.sendMessage(ChatColor.RED + "====================================");

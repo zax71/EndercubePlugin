@@ -12,7 +12,7 @@ import org.bukkit.entity.Player;
 public class CenterTP extends BaseCommand {
 
     @Default
-    @CommandPermission("GHSPP.CenterTP")
+    @CommandPermission("endercube.CenterTP")
     public static void onColor(Player sender, String[] args) {
         double senderX = sender.getLocation().getBlockX() + 0.5;
         double senderY = sender.getLocation().getBlockY();

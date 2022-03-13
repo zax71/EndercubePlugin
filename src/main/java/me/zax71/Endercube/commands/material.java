@@ -17,7 +17,7 @@ public class material extends BaseCommand {
 
 
     @Default
-    @CommandPermission("GHSPP.material")
+    @CommandPermission("endercube.material")
     public static void onColor(CommandSender sender, String[] args) {
 
         // Get the sender as a player
