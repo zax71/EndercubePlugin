@@ -4,4 +4,4 @@ main: me.zax71.Endercube.Endercube
 api-version: 1.17
 authors: [ Zax71 ]
 description: Custom admin tools for Endercube
-depend: [ PlaceholderAPI ]
+depend: [ PlaceholderAPI, PlayerWarps ]

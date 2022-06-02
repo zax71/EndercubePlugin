@@ -87,6 +87,10 @@
             <id>codemc-snapshots</id>
             <url>https://repo.codemc.io/repository/maven-snapshots/</url>
         </repository>
+        <repository>
+            <id>olzie-repo</id>
+            <url>https://repo.olziedev.com/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -116,6 +120,12 @@
             <groupId>net.wesjd</groupId> <!-- AnvilGUI -->
             <artifactId>anvilgui</artifactId>
             <version>1.5.3-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.olziedev</groupId>
+            <artifactId>playerwarps-api</artifactId>
+            <version>6.16.0</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>

@@ -131,7 +131,7 @@ public class Shop extends BaseCommand {
 
         @Default
         public static void onShopWarpsMenu(Player sender, String[] args) {
-            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pwarp open");
+            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pwarp open category -player " + sender.name());
             sender.sendMessage(Endercube.plugin.prefix + "Opened warp menu");
         }
 
@@ -148,6 +148,7 @@ public class Shop extends BaseCommand {
         }
 
         @Subcommand("delete|remove")
+        @CommandCompletion("@warps @nothing")
         @CommandPermission("Endercube.cmd.shop.warps.delete")
         public static void onShopWarpsDelete(Player sender, String[] args) {
             if (args.length == 1) {
@@ -160,6 +161,7 @@ public class Shop extends BaseCommand {
         }
 
         @Subcommand("rename")
+        @CommandCompletion("@warps @nothing")
         @CommandPermission("Endercube.cmd.shop.warps.rename")
         public static void onShopWarpsRename(Player sender, String[] args) {
             if (args.length == 2) {
@@ -172,7 +174,7 @@ public class Shop extends BaseCommand {
         }
 
         @Subcommand("rate|score")
-        @CommandCompletion("@range:0-5 @nothing")
+        @CommandCompletion("@range:0-5 @warps")
         @CommandPermission("Endercube.cmd.shop.warps.rate")
         public static void onShopWarpsRate(Player sender, String[] args) {
             if (args.length == 2) {

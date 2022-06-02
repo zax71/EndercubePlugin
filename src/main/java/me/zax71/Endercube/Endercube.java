@@ -1,6 +1,9 @@
 package me.zax71.Endercube;
 
 import co.aikar.commands.PaperCommandManager;
+import com.google.common.collect.ImmutableList;
+import com.olziedev.playerwarps.api.PlayerWarpsAPI;
+import com.olziedev.playerwarps.api.warp.Warp;
 import me.zax71.Endercube.commands.*;
 import me.zax71.Endercube.events.EntityDeath;
 import me.zax71.Endercube.events.PlayerJoin;
@@ -9,6 +12,11 @@ import me.zax71.Endercube.events.PlayerSwapHandItems;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public final class Endercube extends JavaPlugin {
 
@@ -41,6 +49,14 @@ public final class Endercube extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new EntityDeath(), this);
         getServer().getPluginManager().registerEvents(new PlayerLogin(), this);
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
+
+        // CommandCompletion
+        commandManager.getCommandCompletions().registerCompletion("warps", c -> {
+            // Create an API object
+            PlayerWarpsAPI api = PlayerWarpsAPI.getInstance();
+
+            return api.getPlayerWarps(true).stream().map(Warp::getWarpName).collect(Collectors.toList());
+        });
     }
 
     @Override
