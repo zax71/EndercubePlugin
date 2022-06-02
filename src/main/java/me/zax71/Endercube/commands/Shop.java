@@ -15,13 +15,16 @@ import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
 @CommandAlias("shop")
+@CommandPermission("Endercube.cmd.shop")
 public class Shop extends BaseCommand {
 
     @Subcommand("help")
+    @CommandPermission("Endercube.cmd.shop.help")
     public class ShopHelp extends BaseCommand {
 
         @HelpCommand
         @Default
+        @CommandPermission("Endercube.cmd.shop.help")
         public static void onShopHelp(Player sender, String[] args) {
             final TextComponent shopHelpMessage = Component.text("Welcome to the Endercube shop. This is the help command, choose your option from the list below and enter it with ")
                     .color(NamedTextColor.GRAY)
@@ -68,6 +71,7 @@ public class Shop extends BaseCommand {
         }
 
         @Subcommand("1")
+        @CommandPermission("Endercube.cmd.shop.help.1")
         public static void onShopHelp1(Player sender, String[] args) {
             sender.sendMessage(CentredMessage.generate("&8&m     &r&8[&l&3Shop Help&8]&m     &r"));
 
@@ -77,6 +81,7 @@ public class Shop extends BaseCommand {
         }
 
         @Subcommand("2")
+        @CommandPermission("Endercube.cmd.shop.help.2")
         public static void onShopHelp2(Player sender, String[] args) {
             sender.sendMessage(CentredMessage.generate("&8&m     &r&8[&l&3Shop Help&8]&m     &r"));
             sender.sendMessage(ColorMessage.color("&7&l/shop warps&r&7 - Main Warps menu"));
@@ -87,6 +92,7 @@ public class Shop extends BaseCommand {
         }
 
         @Subcommand("3")
+        @CommandPermission("Endercube.cmd.shop.help.3")
         public static void onHelp3(Player sender, String[] args) {
             sender.sendMessage(CentredMessage.generate("&8&m     &r&8[&l&3Shop Help&8]&m     &r"));
 
@@ -110,6 +116,7 @@ public class Shop extends BaseCommand {
 
 
     @Subcommand("warp")
+    @CommandPermission("Endercube.cmd.shop.warp")
     public static void onShopWarp(Player sender, String[] args) {
         Location shopSpawn = Bukkit.getWorld("survivalShop").getSpawnLocation();
 
@@ -119,6 +126,7 @@ public class Shop extends BaseCommand {
     }
 
     @Subcommand("warps")
+    @CommandPermission("Endercube.cmd.shop.warps")
     public class shopWarps extends BaseCommand {
 
         @Default
@@ -128,6 +136,7 @@ public class Shop extends BaseCommand {
         }
 
         @Subcommand("create|set")
+        @CommandPermission("Endercube.cmd.shop.warps.create")
         public static void onShopWarpsCreate(Player sender, String[] args) {
             if (args.length == 1) {
                 Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pwarp set " + args[0]);
@@ -139,6 +148,7 @@ public class Shop extends BaseCommand {
         }
 
         @Subcommand("delete|remove")
+        @CommandPermission("Endercube.cmd.shop.warps.delete")
         public static void onShopWarpsDelete(Player sender, String[] args) {
             if (args.length == 1) {
                 Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pwarp remove " + args[0]);
@@ -150,6 +160,7 @@ public class Shop extends BaseCommand {
         }
 
         @Subcommand("rename")
+        @CommandPermission("Endercube.cmd.shop.warps.rename")
         public static void onShopWarpsRename(Player sender, String[] args) {
             if (args.length == 2) {
                 Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pwarp rename " + args[0] + " " + args[1]);
@@ -162,6 +173,7 @@ public class Shop extends BaseCommand {
 
         @Subcommand("rate|score")
         @CommandCompletion("@range:0-5 @nothing")
+        @CommandPermission("Endercube.cmd.shop.warps.rate")
         public static void onShopWarpsRate(Player sender, String[] args) {
             if (args.length == 2) {
                 Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pwarp rate " + args[1] + " " + args[0]);
@@ -175,9 +187,11 @@ public class Shop extends BaseCommand {
     }
 
     @Subcommand("claim")
+    @CommandPermission("Endercube.cmd.shop.claim")
     public class shopClaim extends BaseCommand {
 
         @Default
+        @CommandPermission("Endercube.cmd.shop.claim")
         public static void onShopClaim(Player sender, String[] args) {
             if (sender.getWorld() == Bukkit.getWorld("survivalShop")) {
                 Bukkit.dispatchCommand(sender, "p claim");
@@ -185,6 +199,7 @@ public class Shop extends BaseCommand {
         }
 
         @Subcommand("auto")
+        @CommandPermission("Endercube.cmd.shop.claim.auto")
         public static void onShopClaimAuto(Player sender, String[] args) {
             if (sender.getWorld() == Bukkit.getWorld("survivalShop")) {
                 Bukkit.dispatchCommand(sender, "p auto");
