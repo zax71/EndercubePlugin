@@ -66,14 +66,14 @@ public class Shop extends BaseCommand {
 
                                     .color(NamedTextColor.GRAY)
                     );
-            sender.sendMessage(CentredMessage.generate("&8&m     &r&8[&l&3Shop Help&8]&m     &r"));
+            sender.sendMessage(CentredMessage.generate("&8&m     &r&8[&3&lShop Help&8]&m     &r"));
             sender.sendMessage(shopHelpMessage);
         }
 
         @Subcommand("1")
         @CommandPermission("Endercube.cmd.shop.help.1")
         public static void onShopHelp1(Player sender, String[] args) {
-            sender.sendMessage(CentredMessage.generate("&8&m     &r&8[&l&3Shop Help&8]&m     &r"));
+            sender.sendMessage(CentredMessage.generate("&8&m     &r&8[&3&lShop Help&8]&m     &r"));
 
             sender.sendMessage(ColorMessage.color("&7&l/shop warp&r&7 - Teleports you to the shop world"));
             sender.sendMessage(ColorMessage.color("&7&l/shop claim&r&7 - Claims the plot you are standing on"));
@@ -83,7 +83,7 @@ public class Shop extends BaseCommand {
         @Subcommand("2")
         @CommandPermission("Endercube.cmd.shop.help.2")
         public static void onShopHelp2(Player sender, String[] args) {
-            sender.sendMessage(CentredMessage.generate("&8&m     &r&8[&l&3Shop Help&8]&m     &r"));
+            sender.sendMessage(CentredMessage.generate("&8&m     &r&8[&3&lShop Help&8]&m     &r"));
             sender.sendMessage(ColorMessage.color("&7&l/shop warps&r&7 - Main Warps menu"));
             sender.sendMessage(ColorMessage.color("&7&l/shop warps create <name>&r&7 - Create a warp"));
             sender.sendMessage(ColorMessage.color("&7&l/shop warps delete <name>&r&7 - Delete a warp"));
@@ -94,7 +94,7 @@ public class Shop extends BaseCommand {
         @Subcommand("3")
         @CommandPermission("Endercube.cmd.shop.help.3")
         public static void onHelp3(Player sender, String[] args) {
-            sender.sendMessage(CentredMessage.generate("&8&m     &r&8[&l&3Shop Help&8]&m     &r"));
+            sender.sendMessage(CentredMessage.generate("&8&m     &r&8[&3&lShop Help&8]&m     &r"));
 
             final TextComponent shopCreateHelpMessage = Component.text("To create a shop, press ")
                     .append(
