@@ -16,7 +16,7 @@ public class SendParse extends BaseCommand {
 
     @Subcommand("legacy")
     @CommandPermission("endercube.cmd.SendParse.legacy")
-    @CommandCompletion("@players")
+    @CommandCompletion("@players @nothing")
     public static void onSendParseLegacy(CommandSender sender, String[] args) {
         if(args.length >= 2) {
 
@@ -30,7 +30,12 @@ public class SendParse extends BaseCommand {
             }
 
             if (player != null) {
-                player.sendMessage(ColorMessage.color(args[1]));
+                StringBuilder message = new StringBuilder();
+                for(int i=1;i < args.length;i++) {
+                    message.append(args[i]).append(" ");
+                }
+                player.sendMessage(ColorMessage.color(message.toString()));
+
             }
         } else {
             sender.sendMessage(Endercube.plugin.prefix + "Usage: /SendParse legacy <player> <text>");
