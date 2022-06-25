@@ -131,7 +131,8 @@ public class Shop extends BaseCommand {
 
         @Default
         public static void onShopWarpsMenu(Player sender, String[] args) {
-            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pwarp open category -player " + sender.name());
+            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pwarp open category -player " + sender.getName());
+            Endercube.plugin.getLogger().info("Sent command \"pwarp open category -player " + sender.getName() + "\"");
             sender.sendMessage(Endercube.plugin.prefix + "Opened warp menu");
         }
 
