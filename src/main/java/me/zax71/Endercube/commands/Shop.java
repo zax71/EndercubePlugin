@@ -120,6 +120,10 @@ public class Shop extends BaseCommand {
     public static void onShopWarp(Player sender, String[] args) {
         Location shopSpawn = Bukkit.getWorld("survivalShop").getSpawnLocation();
 
+        shopSpawn.setPitch(-20f);
+        shopSpawn.setYaw(180f);
+
+
         sender.teleport(shopSpawn);
 
         sender.sendMessage(Endercube.plugin.prefix + ChatColor.DARK_AQUA + "Teleported to the shop spawn");
