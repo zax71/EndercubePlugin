@@ -1,4 +1,4 @@
-# GHSPP Admin Tools Configuration
+# Endercube-Plugin Configuration
 
 # Command to be run when a player presses F
 Fcommand:
@@ -15,6 +15,24 @@ ipKick:
     - 'your.domain.net:25565'
   kickMessage: 'Sorry, you can''t join on this ip address'
 
+
 joinMessage:
+  # Should the message only be sent once a player has accepted your resource pack
+  resourcePack: true
   enabled: false
-  message: "<red>Someone Joined"
+  # All support MiniMessage
+  actions:
+    broadcast: "<dark_gray><bold>[</bold><green>+<bold><dark_gray>]</bold> <white>%player_name%"
+    title: "JoinMessage title"
+    subtitle: "JoinMessage subtitle"
+    actionbar: "JoinMessage actionbar"
+    commands:
+      - "say joinMessage commands"
+
+quitMessage:
+  enabled: false
+  # All support MiniMessage
+  actions:
+    broadcast: "<dark_gray><bold>[</bold><red>-<bold><dark_gray>]</bold> <white>%player_name%"
+    commands:
+      - "say QuitMessage commands"
