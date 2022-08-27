@@ -52,8 +52,11 @@ public class ActionExecuter {
 
         player.sendActionBar(actionbarComponent);
 
+
         for (int i = 0; i < commandsString.size(); i++) {
-            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), commandsString.get(i));
+            if (!commandsString.get(i).equals("")) {
+                Bukkit.dispatchCommand(Bukkit.getConsoleSender(), commandsString.get(i));
+            }
         }
     }
 }

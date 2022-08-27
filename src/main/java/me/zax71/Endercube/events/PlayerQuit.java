@@ -31,15 +31,16 @@ public class PlayerQuit implements Listener {
             // Execute commands
             if (commands != null) {
                 for (int i = 0; i < commands.size(); i++) {
-
                     // Get the current working command as a variable
                     String currentCommand = String.valueOf(commands.get(i));
+                    if (!currentCommand.equals("")) {
+                        // Phrase it with PAPI
+                        String papiCommand = PlaceholderAPI.setPlaceholders(player, currentCommand);
 
-                    // Phrase it with PAPI
-                    String papiCommand = PlaceholderAPI.setPlaceholders(player, currentCommand);
+                        // Send the commands
+                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), papiCommand);
+                    }
 
-                    // Send the commands
-                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), papiCommand);
                 }
             }
 
