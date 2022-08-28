@@ -1,9 +1,8 @@
 package me.zax71.Endercube.events;
 
-import me.clip.placeholderapi.PlaceholderAPI;
+
 import me.zax71.Endercube.Endercube;
 import me.zax71.Endercube.utils.ActionExecuter;
-import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -12,7 +11,6 @@ import org.bukkit.event.player.PlayerResourcePackStatusEvent;
 import java.util.Set;
 import java.util.UUID;
 
-import static me.zax71.Endercube.Endercube.plugin;
 import static org.bukkit.event.player.PlayerResourcePackStatusEvent.Status.SUCCESSFULLY_LOADED;
 
 public class PlayerResourcePackStatus implements Listener {
