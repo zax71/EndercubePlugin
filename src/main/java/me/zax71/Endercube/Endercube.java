@@ -37,6 +37,7 @@ public final class Endercube extends JavaPlugin {
         commandManager.registerCommand(new CenterTP());
         commandManager.registerCommand(new Shop());
         commandManager.registerCommand(new SendParse());
+        commandManager.registerCommand(new CenterText());
 
         // Register events
 
