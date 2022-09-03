@@ -8,7 +8,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 
 @CommandAlias("color|colour")
-public class color extends BaseCommand {
+public class Color extends BaseCommand {
 
         @Default
         @CommandPermission("endercube.color")

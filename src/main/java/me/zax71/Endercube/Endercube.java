@@ -28,8 +28,8 @@ public final class Endercube extends JavaPlugin {
 
         // Commands
         PaperCommandManager commandManager = new PaperCommandManager(this);
-        commandManager.registerCommand(new color());
-        commandManager.registerCommand(new material());
+        commandManager.registerCommand(new Color());
+        commandManager.registerCommand(new Material());
         commandManager.registerCommand(new EndercubeCommand());
         commandManager.registerCommand(new NoName());
         commandManager.registerCommand(new Rename());
