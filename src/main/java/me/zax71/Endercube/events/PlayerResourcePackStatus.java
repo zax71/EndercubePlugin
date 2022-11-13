@@ -2,6 +2,7 @@ package me.zax71.Endercube.events;
 
 
 import me.zax71.Endercube.Endercube;
+import me.zax71.Endercube.placeholders.ResourcePackSent;
 import me.zax71.Endercube.utils.ActionExecuter;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -19,6 +20,7 @@ public class PlayerResourcePackStatus implements Listener {
     public void onPlayerResourcePackStatusEventEvent(PlayerResourcePackStatusEvent e) {
         Player player = e.getPlayer();
         Set<UUID> messageSent = Endercube.ResourcePackLoginMessageSent;
+        Set<UUID> packAccepted = Endercube.ResourcePackAccepted;
 
 
         Boolean joinEnabled = Endercube.plugin.getConfig().getBoolean("joinMessage.enabled");
@@ -27,6 +29,8 @@ public class PlayerResourcePackStatus implements Listener {
 
             ActionExecuter.execute("joinMessage.actions", player);
             messageSent.remove(player.getUniqueId());
+            packAccepted.add(player.getUniqueId());
+
         }
 
     }

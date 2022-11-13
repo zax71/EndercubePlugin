@@ -5,6 +5,8 @@ import com.olziedev.playerwarps.api.PlayerWarpsAPI;
 import com.olziedev.playerwarps.api.warp.Warp;
 import me.zax71.Endercube.commands.*;
 import me.zax71.Endercube.events.*;
+import me.zax71.Endercube.placeholders.ResourcePackSent;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -17,6 +19,7 @@ public final class Endercube extends JavaPlugin {
     public static Endercube plugin;
     public String prefix = ChatColor.DARK_GRAY + "[" + ChatColor.DARK_AQUA + "Endercube" + ChatColor.DARK_GRAY + "] " + ChatColor.RESET;
     public static Set<UUID> ResourcePackLoginMessageSent = new HashSet<UUID>();
+    public static Set<UUID> ResourcePackAccepted = new HashSet<UUID>();
 
     @Override
     public void onEnable() {
@@ -55,6 +58,10 @@ public final class Endercube extends JavaPlugin {
 
             return api.getPlayerWarps(true).stream().map(Warp::getWarpName).collect(Collectors.toList());
         });
+
+        if(Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
+            new ResourcePackSent().register();
+        }
 
 
     }
